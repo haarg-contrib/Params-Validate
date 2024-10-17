@@ -11,7 +11,7 @@ use Exporter;
 use Module::Implementation;
 use Params::Validate::Constants;
 
-use vars qw( $NO_VALIDATION %OPTIONS $options );
+our ( %OPTIONS,  $options );
 
 our @ISA = 'Exporter';
 
@@ -40,7 +40,7 @@ our %EXPORT_TAGS = (
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{all} }, 'set_options' );
 our @EXPORT    = qw( validate validate_pos );
 
-$NO_VALIDATION = $ENV{PERL_NO_VALIDATION};
+our $NO_VALIDATION = $ENV{PERL_NO_VALIDATION};
 
 {
     my $loader = Module::Implementation::build_loader_sub(

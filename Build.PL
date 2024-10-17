@@ -36,7 +36,6 @@ my %module_build_args = (
     "XSLoader" => 0,
     "perl" => "5.008001",
     "strict" => 0,
-    "vars" => 0,
     "warnings" => 0
   },
   "test_requires" => {
